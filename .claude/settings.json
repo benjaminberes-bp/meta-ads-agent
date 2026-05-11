@@ -1,16 +1,1 @@
-{
-  "hooks": {
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "Set-Location 'C:\\Users\\bbere\\claude-projects\\meta-ads-agent'; git add .claude/memory/; $s = git status --porcelain .claude/memory/; if ($s) { git commit -m 'update memory'; git push }",
-            "shell": "powershell",
-            "statusMessage": "Syncing memory to GitHub..."
-          }
-        ]
-      }
-    ]
-  }
-}
+{}
