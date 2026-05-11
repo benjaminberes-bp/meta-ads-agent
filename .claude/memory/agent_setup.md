@@ -26,11 +26,28 @@ Autonomous Meta Ads agent fully configured for weekly operation.
 - First run: 2026-05-18
 
 ## Approval Workflow (semi-automatic)
-1. Agent fetches data & runs 5 analyses (anomaly, fatigue, pacing, wasted spend, scaling)
-2. Generates numbered recommendations R1, R2... ranked by financial impact in €
-3. STOPS — presents report to user for approval
-4. User approves specific items: "Applique R1, R3"
-5. `/meta-ads-apply` executes approved changes
+1. Agent fetches Windsor.ai data (14 days campaign, 7 days adset+ad)
+2. Runs PACTO analysis (P/A/C/T/O — each gets VERT/JAUNE/ORANGE/ROUGE status)
+3. Writes `data/report_data.json` with full analysis
+4. Generates Excel report: `python scripts/generate_pacto_report.py --data data/report_data.json`
+5. Presents numbered recommendations R1, R2... STOPS and waits for approval
+6. User approves: "Applique R1, R3"
+7. `/meta-ads-apply` executes approved changes
+
+## PACTO Framework
+- **P** – Paramètres : structure, budget, attribution, objectifs, diffusion
+- **A** – Audiences : fréquence, CPM WoW, saturation, overlap, exclusions
+- **C** – Créatives : CTR WoW, fatigue créative, formats, hooks
+- **T** – Tunnel : cohérence pub/LP, taux de conversion, expérience post-clic
+- **O** – Offre : valeur de conversion, ROAS, compétitivité
+
+## Excel Report Generator
+- Script: `scripts/generate_pacto_report.py`
+- Input: `data/report_data.json`
+- Output: `reports/PACTO-Bienpréter-YYYY-MM-DD.xlsx`
+- Sheets: DASHBOARD, RAPPORT, ENJEUX, OPTIMISATIONS PACTO, LEARNING, MÉTRIQUES DOC
+- Requires: `pip install openpyxl` (already installed)
+- Test: `python scripts/generate_pacto_report.py --data data/report_example.json`
 
 ## Meta API for Apply Step
 - Requires env var: `META_ACCESS_TOKEN`
