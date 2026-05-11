@@ -1,0 +1,127 @@
+{
+  "client_name": "Bienprêter #2",
+  "report_date": "2026-05-12",
+  "period_start": "2026-05-05",
+  "period_end": "2026-05-11",
+  "account_status": "JAUNE",
+
+  "kpis_cibles": {
+    "cpa_leads": 8.0,
+    "cpa_achats": null,
+    "budget_journalier": 100.0,
+    "frequence_max": 3.0
+  },
+
+  "kpis_actuels": {
+    "cpa_leads": 9.20,
+    "cpa_achats": null,
+    "budget_journalier": 95.0,
+    "frequence_moyenne": 2.8
+  },
+
+  "rapport_semaine": [
+    {
+      "periode_debut": "2026-05-05",
+      "periode_fin": "2026-05-11",
+      "analyse": "Performance stable cette semaine avec un CPA leads à 9,20€ (cible 8€). La fréquence monte à 2,8 sur la campagne principale TOF. Le CTR est en légère baisse (-12% WoW) ce qui signale un début de fatigue créative. Budget bien distribué à 95€/j.",
+      "campagnes_a_optimiser": ["TOF – Broad – Leads", "Retargeting 30j"],
+      "niveau_optimisation": "C",
+      "explications": "Les créatifs principaux ont 3+ semaines de diffusion. Fréquence 2,8 + CTR en baisse = signal de renouvellement créatif. Tester 3 nouveaux hooks/angles en priorité."
+    }
+  ],
+
+  "optimisations_90j": [
+    {
+      "optimisation": "Renouvellement créatif – tester 3 nouveaux hooks",
+      "metrique": "CTR / CPA leads",
+      "resultat_depart": "1.2% CTR / 10€ CPA",
+      "resultat_actuel": "0.95% CTR / 9.20€ CPA",
+      "resultat_vise": "1.1%+ CTR / 8€ CPA",
+      "progression": "ORANGE",
+      "finalite": "Retrouver CTR > 1% et CPA < 8€",
+      "periode_debut": "2026-05-12",
+      "periode_fin": "2026-05-26"
+    },
+    {
+      "optimisation": "Test audience glaciale (exclusion visiteurs 180j)",
+      "metrique": "CPM / CPA leads",
+      "resultat_depart": "8.50€ CPM",
+      "resultat_actuel": "9.20€ CPM",
+      "resultat_vise": "< 8€ CPM",
+      "progression": "NON-DÉBUTÉ",
+      "finalite": "Réduire CPM en ciblant audience fraîche",
+      "periode_debut": "2026-05-12",
+      "periode_fin": "2026-05-26"
+    }
+  ],
+
+  "pacto_analysis": {
+    "P": {
+      "status": "VERT",
+      "recommendations": []
+    },
+    "A": {
+      "status": "JAUNE",
+      "recommendations": [
+        "Utiliser des audiences glaciales (exclusion visiteurs 180j)",
+        "Exclusion d'audiences (audience overlap)"
+      ]
+    },
+    "C": {
+      "status": "ORANGE",
+      "recommendations": [
+        "Tester 3 nouveaux hooks / angles",
+        "Décliner le/les visuel(s) gagnant(s)",
+        "Changer les 5 premières secondes d'une vidéo"
+      ]
+    },
+    "T": {
+      "status": "VERT",
+      "recommendations": []
+    },
+    "O": {
+      "status": "VERT",
+      "recommendations": []
+    }
+  },
+
+  "enjeux": [
+    {
+      "metrique": "CTR",
+      "resultat": "0.95%",
+      "kpi_cible": "≥ 1.0%",
+      "enjeu": "CTR en baisse (-12% WoW)",
+      "raisonnement": "Les créatifs actifs ont 3+ semaines. Fréquence 2,8 → début de saturation. Les 5 premières secondes ne captent plus suffisamment l'attention.",
+      "optimisation": "C – Tester 3 nouveaux hooks/angles\nC – Décliner visuel(s) gagnant(s)\nC – Changer les 5 premières secondes d'une vidéo"
+    },
+    {
+      "metrique": "CPA leads",
+      "resultat": "9.20€",
+      "kpi_cible": "≤ 8€",
+      "enjeu": "CPA au-dessus de la cible",
+      "raisonnement": "CPA progresse vers la cible (était 10€ il y a 2 semaines) mais pas encore atteint. Lié en partie au CTR en baisse.",
+      "optimisation": "C – Améliorer les créatifs (corrélé au CTR)\nA – Tester audience glaciale pour réduire CPM"
+    },
+    {
+      "metrique": "Fréquence",
+      "resultat": "2.8",
+      "kpi_cible": "≤ 3.0",
+      "enjeu": "Fréquence qui monte – à surveiller",
+      "raisonnement": "Pas encore critique (< 3.5) mais tendance haussière. Si les créatifs ne sont pas renouvelés cette semaine, on atteindra le seuil critique la semaine prochaine.",
+      "optimisation": "C – Lancer nouveaux créatifs pour diluer la fréquence\nA – Élargir légèrement l'audience si possible"
+    }
+  ],
+
+  "learning": [
+    {
+      "debut": "2026-04-28",
+      "fin": "2026-05-04",
+      "statut": "SUCCÈS",
+      "campagne": "TOF – Broad – Leads",
+      "facteurs": "Réduction budget 900€ → 100€/j a permis de retrouver de bons CPAs. L'algorithme était en surchauffe.",
+      "audiences": "Broad 18-65 France",
+      "publicites": "Vidéo UGC 30s – hook « Vous cherchez un prêt immobilier... »",
+      "offres_funnel": "Landing page formulaire lead direct"
+    }
+  ]
+}
